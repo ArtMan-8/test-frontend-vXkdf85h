@@ -1,0 +1,27 @@
+env:
+  es6: true
+  browser: true
+  commonjs: true
+
+extends: [
+    "airbnb-base",
+    "eslint:recommended",
+    "plugin:react/recommended",
+  ]
+
+parserOptions:
+  ecmaFeatures:
+    jsx: true
+  sourceType: module
+
+rules: {
+    'comma-dangle': ['error', 'never']
+}
+
+plugins: [
+    "react"
+  ]
+
+settings:
+  react:
+    version: '16'

@@ -1,0 +1,42 @@
+{
+  "name": "test-frontend-greensight",
+  "version": "1.0.0",
+  "description": "Тестовое задание Greensight",
+  "main": "index.js",
+  "scripts": {
+    "eslint": "eslint --ext .jsx --ext .js src/",
+    "test": "npm run eslint",
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArtMan-8/test-frontend-Greensight.git"
+  },
+  "author": "Vladimir Artyukhov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArtMan-8/test-frontend-Greensight/issues"
+  },
+  "homepage": "https://github.com/ArtMan-8/test-frontend-Greensight#readme",
+  "devDependencies": {
+    "@babel/core": "7.11.0",
+    "@babel/preset-env": "7.11.0",
+    "@babel/preset-react": "7.10.4",
+    "babel-loader": "8.1.0",
+    "babel-plugin-styled-components": "1.11.1",
+    "eslint": "7.6.0",
+    "eslint-config-airbnb-base": "14.2.0",
+    "eslint-plugin-import": "2.22.0",
+    "eslint-plugin-react": "7.20.5",
+    "webpack": "4.44.1",
+    "webpack-cli": "3.3.12",
+    "webpack-dev-server": "3.11.0"
+  },
+  "dependencies": {
+    "prop-types": "15.7.2",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "styled-components": "5.1.1"
+  }
+}
