@@ -8,22 +8,18 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0;
-    width: 100wh;
-    height: 100vh;
     font-family: "Roboto", sans-serif;
     font-style: normal;
     font-weight: normal;
     color: #C4C4C4;
-    background-color: ${ColorsBackground.GRAY_DARK};
+    background-color: ${ColorsBackground.GREY_DARK};
     ${TextDefault}
   }
 `;
 
 const Wrapper = styled.section`
-  width: 1032px;
   padding: 72px 88px 104px;
-  background-color: ${ColorsBackground.GRAY};
+  background-color: ${ColorsBackground.GREY};
 `;
 
 const App = () => <React.Fragment>

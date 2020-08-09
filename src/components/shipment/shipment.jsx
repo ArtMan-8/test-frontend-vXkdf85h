@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { TextHeader, ColorsActive, ColorsMain } from '../variables.styled';
+import Delivery from '../delivery/delivery.jsx';
 
 const Header = styled.h1`
   margin-top: 0;
@@ -21,11 +22,11 @@ const Nav = styled.nav`
     margin-right: 8px;
     padding: 12px 39px;
     border-radius: 5px 5px 0 0;
-    background-color: ${ColorsMain.GRAY_LIGHT};
+    background-color: ${ColorsMain.GREY_LIGHT};
     cursor: pointer;
 
     a {
-      color: ${ColorsMain.GRAY};
+      color: ${ColorsMain.GREY};
     }
   }
 
@@ -53,6 +54,7 @@ const Shipment = () => <React.Fragment>
       </ul>
     </Nav>
 
+    <Delivery />
   </div>
 
 </React.Fragment>;

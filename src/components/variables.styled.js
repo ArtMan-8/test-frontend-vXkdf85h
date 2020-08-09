@@ -5,21 +5,16 @@ export const ColorsActive = {
 };
 
 export const ColorsBackground = {
-  GRAY: '#F6F6F6',
-  GRAY_DARK: '#E5E5E5'
+  GREY: '#F6F6F6',
+  GREY_DARK: '#E5E5E5'
 };
 
 export const ColorsMain = {
   BLACK: '#222222',
-  GRAY: '#999999',
-  GRAY_LIGHT: '#EDEEEF',
+  GREY: '#999999',
+  GREY_LIGHT: '#EDEEEF',
   WHITE: '#ffffff'
 };
-
-export const Shadow = `
-  background: #C4C4C4;
-  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.25);
-`;
 
 export const TextHeader = `
   font-size: 32px;
