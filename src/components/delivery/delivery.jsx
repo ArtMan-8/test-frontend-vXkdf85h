@@ -4,6 +4,8 @@ import {
   ColorsActive, ColorsMain, TextDefault, TextSmall
 } from '../variables.styled';
 
+import BtnSubmit from '../btn-submit/btn-submit.jsx';
+
 const Form = styled.form`
   width: 952px;
   padding: 40px 40px 48px;
@@ -91,27 +93,6 @@ const Form = styled.form`
       box-shadow: none;
     }
   }
-
-  .form__btn {
-    display: block;
-    padding: 12px 38px;
-    margin-left: auto;
-    border: none;
-    border-radius: 80px;
-    color: ${ColorsMain.WHITE};
-    background-color: ${ColorsActive.BLUE};
-    cursor: pointer;
-    ${TextDefault}
-
-    &:hover {
-      background-color: ${ColorsActive.DARK_BLUE};
-    }
-
-    &:active {
-      color: ${ColorsMain.GREY};
-      background-color: ${ColorsMain.GREY_LIGHT};
-    }
-  }
 `;
 
 const Delivery = () => <React.Fragment>
@@ -145,7 +126,7 @@ const Delivery = () => <React.Fragment>
     </div>
 
     <div className="form__submit">
-      <button className="form__btn" type="submit">Оформить заказ</button>
+      <BtnSubmit>Оформить заказ</BtnSubmit>
     </div>
   </Form>
 </React.Fragment>;
