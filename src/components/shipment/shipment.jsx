@@ -2,6 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import { TextHeader, ColorsActive, ColorsMain } from '../variables.styled';
 import Delivery from '../delivery/delivery.jsx';
+import Pickup from '../pickup/pickup.jsx';
+
+const ShipmentType = {
+  DELIVERY: 'delivery',
+  PICKUP: 'pickup',
+};
 
 const Header = styled.h1`
   margin-top: 0;
@@ -43,20 +49,34 @@ const Nav = styled.nav`
   }
 `;
 
-const Shipment = () => <React.Fragment>
-  <Header className="shipment__header">Выберите способ доставки</Header>
+const Shipment = () => {
+  const [nav, setNav] = React.useState('delivery');
 
-  <div>
-    <Nav className="shipment__nav">
-      <ul className="shipment__list">
-        <li className="shipment__item shipment__item--active"><a href="#">Доставка</a></li>
-        <li className="shipment__item"><a href="#">Самовывоз</a></li>
-      </ul>
-    </Nav>
+  const isDelivery = nav === ShipmentType.DELIVERY;
+  const isPickup = nav === ShipmentType.PICKUP;
 
-    <Delivery />
-  </div>
+  return <React.Fragment>
+    <Header className="shipment__header">Выберите способ доставки</Header>
 
-</React.Fragment>;
+    <div>
+      <Nav className="shipment__nav">
+        <ul className="shipment__list">
+          <li
+            className={`shipment__item ${isDelivery && 'shipment__item--active'}`}
+            onClick={() => setNav('delivery')}
+          ><a href="#">Доставка</a></li>
+          <li
+            className={`shipment__item ${isPickup && 'shipment__item--active'}`}
+            onClick={() => setNav('pickup')}
+          ><a href="#">Самовывоз</a></li>
+        </ul>
+      </Nav>
+
+      {isDelivery && <Delivery />}
+      {isPickup && <Pickup />}
+    </div>
+
+  </React.Fragment>;
+};
 
 export default Shipment;

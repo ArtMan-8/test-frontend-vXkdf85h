@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import {
-  ColorsActive, ColorsMain, TextDefault, TextSmall
+  ColorsActive, ColorsMain, TextDefault, TextSmall,
 } from '../variables.styled';
 
 import BtnSubmit from '../btn-submit/btn-submit.jsx';
@@ -59,7 +59,7 @@ const Form = styled.form`
     height: 22px;
     right: 13px;
     bottom: 13px;
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' fill='none'%3e%3cpath fill='%23F12828' d='M11 22C4.9 22 0 17.1 0 11S4.9 0 11 0s11 4.9 11 11-4.9 11-11 11zm0-20c-5 0-9 4-9 9s4 9 9 9 9-4 9-9-4-9-9-9z'/%3e%3cpath fill='%23F12828' d='M11 12c-.6 0-1-.4-1-1V7c0-.6.4-1 1-1s1 .4 1 1v4c0 .6-.4 1-1 1zM11 16c-.3 0-.5-.1-.7-.3-.2-.2-.3-.4-.3-.7 0-.1 0-.3.1-.4.1-.1.1-.2.2-.3.3-.3.7-.4 1.1-.2.1 0 .1 0 .2.1 0 0 .1.1.2.1.1.1.2.2.2.3v.4c0 .1 0 .3-.1.4-.1.1-.1.2-.2.3-.2.2-.4.3-.7.3z'/%3e%3c/svg%3e");
+    background-image: url('/img/icon-error.svg');
   }
 
   .form__field--error::after {
@@ -125,9 +125,7 @@ const Delivery = () => <React.Fragment>
       </div>
     </div>
 
-    <div className="form__submit">
-      <BtnSubmit>Оформить заказ</BtnSubmit>
-    </div>
+    <BtnSubmit>Оформить заказ</BtnSubmit>
   </Form>
 </React.Fragment>;
 

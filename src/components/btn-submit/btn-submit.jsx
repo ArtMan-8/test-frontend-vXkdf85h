@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import {
-  ColorsActive, ColorsMain, TextDefault
+  ColorsActive, ColorsMain, TextDefault,
 } from '../variables.styled';
 
 const Submit = styled.button`
@@ -29,7 +29,7 @@ const Submit = styled.button`
 const BtnSubmit = ({ children }) => <Submit className="btn-submit" type="submit">{children}</Submit>;
 
 BtnSubmit.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
 };
 
 export default BtnSubmit;

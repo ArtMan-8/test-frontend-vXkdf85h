@@ -14,10 +14,6 @@ parserOptions:
     jsx: true
   sourceType: module
 
-rules: {
-    'comma-dangle': ['error', 'never']
-}
-
 plugins: [
     "react"
   ]
