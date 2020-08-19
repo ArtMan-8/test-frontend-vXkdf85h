@@ -1,12 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
+import InputMask from 'react-input-mask';
 import {
   ColorsActive, ColorsMain, TextDefault, TextSmall,
 } from '../variables.styled';
 
 import BtnSubmit from '../btn-submit/btn-submit.jsx';
 
-const Form = styled.form`
+export const Form = styled.form`
   width: 952px;
   padding: 40px 40px 48px;
   border-radius: 0 0 5px 5px;
@@ -95,38 +96,65 @@ const Form = styled.form`
   }
 `;
 
-const Delivery = () => <React.Fragment>
-  <Form action="#" className="shipment__form form">
-    <div className="form__fields">
-      <div className="form__contacts">
-        <div className="form__field">
-          <label className="form__label" htmlFor="shipment-name">ФИО</label>
-          <input className="form__input" type="text" name="shipment-name" id="shipment-name"
-            placeholder="Только кириллица" required/>
+const Delivery = () => {
+  const [nameValue, setNameValue] = React.useState('');
+  const [telValue, setTelValue] = React.useState('');
+  const [addressValue, setAddressValue] = React.useState('');
+  const [commentValue, setCommentValue] = React.useState('');
+
+  return <React.Fragment>
+    <Form action="https://echo.htmlacademy.ru/" method="POST" className="delivery__form form">
+      <div className="form__fields">
+        <div className="form__contacts">
+          <div className="form__field">
+            <label className="form__label" htmlFor="delivery-name">ФИО</label>
+            <input className="form__input" type="text" name="delivery-name"
+              id="delivery-name"
+              pattern="^[А-Яа-яЁё\s\-]+$"
+              placeholder="Только кириллица"
+              onChange={(evt) => setNameValue(evt.target.value)}
+              value={nameValue}
+              required
+            />
+          </div>
+
+          <div className="form__field">
+            <label className="form__label" htmlFor="delivery-tel">Телефон</label>
+            <InputMask className="form__input" type="tel" name="delivery-tel" id="delivery-tel"
+              pattern="\+7\s?[\(][0-9]{3}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}"
+              placeholder="+7 (___) ___-__-__"
+              mask="+7 (999) 999-99-99"
+              onChange={(evt) => setTelValue(evt.target.value)}
+              value={telValue}
+              required
+            />
+          </div>
         </div>
 
         <div className="form__field">
-          <label className="form__label" htmlFor="shipment-tel">Телефон</label>
-          <input className="form__input" type="tel" name="shipment-tel" id="shipment-tel"
-            placeholder="+7 (___) ___-__-__" /* pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" */ minLength="11" maxLength="11" required/>
+          <label className="form__label" htmlFor="delivery-address">Адрес доставки</label>
+          <input className="form__input" type="text" name="delivery-address" id="delivery-address"
+            placeholder="Город, улица, дом"
+            onChange={(evt) => setAddressValue(evt.target.value)}
+            value={addressValue}
+            required
+          />
+        </div>
+
+        <div className="form__field">
+          <label className="form__label" htmlFor="delivery-comment">Комментарий</label>
+          <textarea className="form__input" type="text" name="delivery-comment" id="delivery-comment"
+            placeholder="" rows="4"
+            onChange={(evt) => setCommentValue(evt.target.value)}
+            value={commentValue}
+            required
+          />
         </div>
       </div>
 
-      <div className="form__field">
-        <label className="form__label" htmlFor="shipment-address">Адрес доставки</label>
-        <input className="form__input" type="text" name="shipment-address" id="shipment-address"
-          placeholder="Город, улица, дом" required/>
-      </div>
-
-      <div className="form__field">
-        <label className="form__label" htmlFor="shipment-comment">Комментарий</label>
-        <textarea className="form__input" type="text" name="shipment-comment" id="shipment-comment"
-          placeholder="" rows="4" required/>
-      </div>
-    </div>
-
-    <BtnSubmit>Оформить заказ</BtnSubmit>
-  </Form>
-</React.Fragment>;
+      <BtnSubmit>Оформить заказ</BtnSubmit>
+    </Form>
+  </React.Fragment>;
+};
 
 export default Delivery;
