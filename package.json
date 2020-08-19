@@ -1,7 +1,7 @@
 {
-  "name": "test-frontend-greensight",
+  "name": "test-frontend",
   "version": "1.0.0",
-  "description": "Тестовое задание Greensight",
+  "description": "Тестовое задание",
   "main": "index.js",
   "scripts": {
     "eslint": "eslint --ext .jsx --ext .js src/",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ArtMan-8/test-frontend-Greensight.git"
+    "url": "git+https://github.com/ArtMan-8/test-frontend-vXkdf85h.git"
   },
   "author": "Vladimir Artyukhov",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ArtMan-8/test-frontend-Greensight/issues"
+    "url": "https://github.com/ArtMan-8/test-frontend-vXkdf85h/issues"
   },
-  "homepage": "https://github.com/ArtMan-8/test-frontend-Greensight#readme",
+  "homepage": "https://github.com/ArtMan-8/test-frontend-vXkdf85h#readme",
   "devDependencies": {
     "@babel/core": "7.11.0",
     "@babel/preset-env": "7.11.0",
