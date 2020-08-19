@@ -1,12 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
-import { ColorsBackground } from '../variables.styled';
 import Shipment from '../shipment/shipment.jsx';
-
-const Wrapper = styled.section`
-  padding: 72px 88px 104px;
-  background-color: ${ColorsBackground.GREY};
-`;
+import Wrapper from './app.styled';
 
 const App = () => <React.Fragment>
   <Wrapper className="shipment">
