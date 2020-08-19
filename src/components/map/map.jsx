@@ -7,11 +7,6 @@ const iconOptions = L.icon({
   iconSize: [33, 40],
 });
 
-const pinOptions = {
-  clickable: true,
-  icon: iconOptions,
-};
-
 const mapOptions = {
   center: [55.7511, 37.6208],
   zoom: 13,
@@ -25,7 +20,8 @@ class Map extends React.PureComponent {
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 
     const points = pickPoints.map((point) => (L.marker(point.coords, {
-      ...pinOptions,
+      clickable: true,
+      icon: iconOptions,
       id: point.id,
       title: point.title,
     })));
