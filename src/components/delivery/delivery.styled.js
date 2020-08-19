@@ -97,15 +97,7 @@ const Form = styled.form`
     height: 22px;
     right: 13px;
     bottom: 13px;
-    background-image: url('/img/icon-error.svg');
-  }
-
-  .form__field--error::after {
-    position: absolute;
-    content: 'Заполните поле';
-    bottom: -20px;
-    color: ${ColorsActive.RED};
-    ${TextSmall}
+    background-image: url('img/icon-error.svg');
   }
 
   .form__input {
@@ -129,7 +121,20 @@ const Form = styled.form`
 
     &:invalid {
       box-shadow: none;
+      outline: none;
     }
+  }
+
+  .form__input + .form__hint {
+    display: none;
+  }
+
+  .form__input:invalid:focus + .form__hint {
+    display: block;
+    position: absolute;
+    bottom: -32px;
+    color: ${ColorsActive.RED};
+    ${TextSmall}
   }
 `;
 
