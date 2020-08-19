@@ -48,29 +48,24 @@ const Form = styled.form`
 const Pickup = () => {
   const [pickPoint, setPickPoint] = React.useState(PickPoints[0].title);
 
-  const selectpickPoint = (title) => setPickPoint(title);
-
   return <React.Fragment>
-    <Form action="https://echo.htmlacademy.ru/" method="POST" className="pickup__form form"
-      // onSubmit={(evt) => {
-      //   evt.preventDefault();
-      // }}
-    >
+    <Form action="https://echo.htmlacademy.ru/" method="POST" className="pickup__form form">
       <div className="form__addresses">
         {PickPoints.map((point) => (
           <label key={point.id} className="form__label">
-            <input className="form__input" type="radio" name="address" required
+            <input className="form__input" type="radio" name="pickup-address"
               id={point.id}
-              value={point.title}
               checked={point.title === pickPoint}
-              onChange={() => selectpickPoint(point.title)}
+              onChange={() => setPickPoint(point.title)}
+              value={point.title}
+              required
             />Пункт выдачи заказов {point.title}
           </label>))}
       </div>
 
       <div className="form__map" id="map">
         <Map pickPoints={PickPoints}
-          onClick={(title) => selectpickPoint(title)}
+          onClick={(title) => setPickPoint(title)}
         />
       </div>
 
