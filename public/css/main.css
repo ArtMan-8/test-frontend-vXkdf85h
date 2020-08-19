@@ -10,3 +10,10 @@ body {
   font-size: 16px;
   line-height: 24px;
 }
+
+@media screen and (max-width: 1199px) {
+  .root {
+    flex-grow: 1;
+    min-width: 320px;
+  }
+}

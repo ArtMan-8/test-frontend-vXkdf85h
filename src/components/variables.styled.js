@@ -1,3 +1,9 @@
+export const BreakPoints = {
+  MOBILE_MIN: '320px',
+  MOBILE_MAX: '699px',
+  TABLET_MAX: '1199px',
+};
+
 export const ColorsActive = {
   BLUE: '#215BF0',
   DARK_BLUE: '#0F41C4',

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import {
-  ColorsActive, ColorsMain, TextDefault,
+  BreakPoints, ColorsActive, ColorsMain, TextDefault,
 } from '../variables.styled';
 
 const Submit = styled.button`
@@ -13,6 +13,14 @@ const Submit = styled.button`
   background-color: ${ColorsActive.BLUE};
   cursor: pointer;
   ${TextDefault}
+
+  @media screen and (max-width: ${BreakPoints.TABLET_MAX}) {
+    padding: 10px 35px;
+  }
+
+  @media screen and (max-width: ${BreakPoints.MOBILE_MAX}) {
+    padding: 8px 20px;
+  }
 
   &:hover {
     background-color: ${ColorsActive.DARK_BLUE};

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import {
-  ColorsActive, ColorsMain, TextDefault, TextSmall,
+  BreakPoints, ColorsActive, ColorsMain, TextDefault, TextSmall,
 } from '../variables.styled';
 
 const Form = styled.form`
@@ -8,6 +8,15 @@ const Form = styled.form`
   padding: 40px 40px 48px;
   border-radius: 0 0 5px 5px;
   background-color: ${ColorsMain.WHITE};
+
+  @media screen and (max-width: ${BreakPoints.TABLET_MAX}) {
+    padding: 30px 30px 35px;
+    width: auto;
+  }
+
+  @media screen and (max-width: ${BreakPoints.MOBILE_MAX}) {
+    padding: 15px 15px 20px;
+  }
 
   input, textarea {
     ${TextDefault}
@@ -18,6 +27,18 @@ const Form = styled.form`
     display: flex;
     flex-direction: column;
     margin-bottom: 34px;
+
+    @media screen and (max-width: ${BreakPoints.TABLET_MAX}) {
+      margin-bottom: 30px;
+    }
+
+    @media screen and (max-width: ${BreakPoints.MOBILE_MAX}) {
+      margin-bottom: 20px;
+    }
+
+    & > .form__field:last-child {
+      margin-bottom: 0;
+    }
   }
 
   .form__contacts {
@@ -27,20 +48,40 @@ const Form = styled.form`
     .form__field {
       width: 49%;
     }
+
+    @media screen and (max-width: ${BreakPoints.MOBILE_MAX}) {
+      flex-wrap: wrap;
+
+      .form__field {
+        width: 100%;
+      }
+    }
   }
 
   .form__label {
     margin-bottom: 20px;
     color: ${ColorsMain.BLACK};
     ${TextSmall}
+
+    @media screen and (max-width: ${BreakPoints.TABLET_MAX}) {
+      margin-bottom: 15px;
+    }
+
+    @media screen and (max-width: ${BreakPoints.MOBILE_MAX}) {
+      margin-bottom: 10px;
+    }
   }
 
   .form__field {
     position: relative;
     margin-bottom: 30px;
 
-    &:last-child {
-      margin-bottom: 0;
+    @media screen and (max-width: ${BreakPoints.TABLET_MAX}) {
+      margin-bottom: 25px;
+    }
+
+    @media screen and (max-width: ${BreakPoints.MOBILE_MAX}) {
+      margin-bottom: 20px;
     }
 
     textarea {
