@@ -58,15 +58,15 @@ const Shipment = () => {
   return <React.Fragment>
     <Header className="shipment__header">Выберите способ доставки</Header>
 
-    <div>
+    <div className="shipment__wrapper">
       <Nav className="shipment__nav">
         <ul className="shipment__list">
           <li
-            className={`shipment__item ${isDelivery && 'shipment__item--active'}`}
+            className={`shipment__item ${isDelivery ? 'shipment__item--active' : ''}`}
             onClick={() => setNav('delivery')}
           ><a href="#">Доставка</a></li>
           <li
-            className={`shipment__item ${isPickup && 'shipment__item--active'}`}
+            className={`shipment__item ${isPickup ? 'shipment__item--active' : ''}`}
             onClick={() => setNav('pickup')}
           ><a href="#">Самовывоз</a></li>
         </ul>
