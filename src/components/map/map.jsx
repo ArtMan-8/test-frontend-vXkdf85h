@@ -33,8 +33,14 @@ class Map extends React.PureComponent {
     points.forEach((point) => point.on('click', () => {
       this.props.onClick(point.options.title);
     }));
+
     const group = L.featureGroup(points).addTo(map);
+
     map.fitBounds(group.getBounds());
+
+    if (L.Browser.mobile) {
+      map.dragging.disable();
+    }
   }
 
   render() {
