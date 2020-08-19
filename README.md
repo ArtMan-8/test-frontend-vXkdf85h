@@ -29,7 +29,8 @@
 <img src="https://img.shields.io/badge/VSCode-tool-0000FF?style=flat-square&logo=Visual-Studio-Code&labelColor=black"> <img src="https://img.shields.io/badge/ESlint-tool-0000FF?style=flat-square&logo=ESlint&labelColor=black"> <img src="https://img.shields.io/badge/Webpack-tool-0000FF?style=flat-square&logo=Webpack&labelColor=black"> <img src="https://img.shields.io/badge/babel-tool-0000FF?style=flat-square&logo=babel&labelColor=black"> <img src="https://img.shields.io/badge/TravisCI-tool-0000FF?style=flat-square&logo=Travis-CI&labelColor=black"> <img src="https://img.shields.io/badge/ghPages-tool-0000FF?style=flat-square&logo=GitHub&labelColor=black">
 
 <br>
-В формах используется ```action="https://echo.htmlacademy.ru/"``` - при отправке показывает какие данные ушли. Для стилизации использовал **StyledComponents**, но базовые стили вынес в паблик. Для авто-деплоя на **gh-pages** использовал **travic-ci**. Для карты использовал пакет **leaflet**
+
+В формах используется ```action="https://echo.htmlacademy.ru/"``` - при отправке показывает какие данные ушли. Для стилизации использовал **StyledComponents**, но базовые стили вынес в паблик. Для авто-деплоя на **gh-pages** использовал **travic-ci**. Для карты использовал пакет **leaflet**.
 
 ---
 <br>
@@ -40,9 +41,13 @@
 git clone git@github.com:ArtMan-8/test-frontend-vXkdf85h.git
 ```
 
-## Установить
+## Перейти в папку
 ```sh
 cd test-frontend-vXkdf85h
+```
+
+## Установить
+```sh
 npm install
 ```
 
