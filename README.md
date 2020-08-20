@@ -1,6 +1,6 @@
 <h1 align="center">Тестовое задание</h1>
 
-[![Build Status](https://travis-ci.com/ArtMan-8/test-frontend-Greensight.svg?branch=master)](https://travis-ci.com/ArtMan-8/test-frontend-Greensight) <a target="_blank" href="https://artman-8.github.io/test-frontend-vXkdf85h/"><img src="https://img.shields.io/badge/сайт-онлайн-000000?style=flat-square&labelColor=black"/></a>
+[![Build Status](https://travis-ci.com/ArtMan-8/test-frontend-vXkdf85h.svg?branch=master)](https://travis-ci.com/ArtMan-8/test-frontend-vXkdf85h) <a target="_blank" href="https://artman-8.github.io/test-frontend-vXkdf85h/"><img src="https://img.shields.io/badge/сайт-онлайн-000000?style=flat-square&labelColor=black"/></a>
 
 Сверстать компонент и сделать его адаптивным. Адаптив сделайте на ваше усмотрение. Главное, чтобы ничего не ломалось. При увеличении ширины экрана больше чем 1200 px, контентная часть центрируется. Минимальная ширина экрана, на которой страница не должна иметь горизонтального скролла равна 320px.
 
