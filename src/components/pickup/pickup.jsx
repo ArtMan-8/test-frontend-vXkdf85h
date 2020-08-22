@@ -23,8 +23,9 @@ const Pickup = () => {
       </div>
 
       <div className="form__map" id="map">
-        <Map pickPoints={PickPoints}
+        <Map
           onClick={(title) => setPickPoint(title)}
+          pickPoints={PickPoints}
         />
       </div>
 

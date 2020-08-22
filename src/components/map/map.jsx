@@ -2,19 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import L from 'leaflet';
 
-const iconOptions = L.icon({
-  iconUrl: 'img/icon-map-pin.svg',
-  iconSize: [33, 40],
-});
+const Map = ({ onClick, pickPoints }) => {
+  const iconOptions = L.icon({
+    iconUrl: 'img/icon-map-pin.svg',
+    iconSize: [33, 40],
+  });
 
-const mapOptions = {
-  center: [55.7511, 37.6208],
-  zoom: 13,
-};
+  const mapOptions = {
+    center: [55.7511, 37.6208],
+    zoom: 13,
+  };
 
-class Map extends React.PureComponent {
-  componentDidMount() {
-    const { pickPoints } = this.props;
+  React.useEffect(() => {
     const map = L.map('map', mapOptions);
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
@@ -27,7 +26,7 @@ class Map extends React.PureComponent {
     })));
 
     points.forEach((point) => point.on('click', () => {
-      this.props.onClick(point.options.title);
+      onClick(point.options.title);
     }));
 
     const group = L.featureGroup(points).addTo(map);
@@ -37,12 +36,10 @@ class Map extends React.PureComponent {
     if (L.Browser.mobile) {
       map.dragging.disable();
     }
-  }
+  }, []);
 
-  render() {
-    return true;
-  }
-}
+  return true;
+};
 
 Map.propTypes = {
   onClick: PropTypes.func,
