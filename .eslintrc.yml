@@ -21,6 +21,3 @@ plugins: [
 settings:
   react:
     version: '16'
-
-rules:
-  class-methods-use-this: 0

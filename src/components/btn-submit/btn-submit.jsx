@@ -8,4 +8,4 @@ BtnSubmit.propTypes = {
   children: PropTypes.node,
 };
 
-export default BtnSubmit;
+export default React.memo(BtnSubmit);
