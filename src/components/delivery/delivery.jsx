@@ -9,6 +9,14 @@ const Delivery = () => {
   const [addressValue, setAddressValue] = React.useState('');
   const [commentValue, setCommentValue] = React.useState('');
 
+  const isValid = (evt) => {
+    if (!evt.target.validity.valid) {
+      evt.target.parentElement.classList.add('form__field--error');
+    } else {
+      evt.target.parentElement.classList.remove('form__field--error');
+    }
+  };
+
   return <React.Fragment>
     <Form action="https://echo.htmlacademy.ru/" method="POST" className="delivery__form form">
       <div className="form__fields">
@@ -20,12 +28,7 @@ const Delivery = () => {
               pattern="^[А-Яа-яЁё\s\-]+$"
               placeholder="Только кириллица"
               onChange={(evt) => {
-                if (!evt.target.validity.valid) {
-                  evt.target.parentElement.classList.add('form__field--error');
-                } else {
-                  evt.target.parentElement.classList.remove('form__field--error');
-                }
-
+                isValid(evt);
                 setNameValue(evt.target.value);
               }}
               value={nameValue}
@@ -41,12 +44,7 @@ const Delivery = () => {
               placeholder="+7 (___) ___-__-__"
               mask="+7 (999) 999-99-99"
               onChange={(evt) => {
-                if (!evt.target.validity.valid) {
-                  evt.target.parentElement.classList.add('form__field--error');
-                } else {
-                  evt.target.parentElement.classList.remove('form__field--error');
-                }
-
+                isValid(evt);
                 setTelValue(evt.target.value);
               }}
               value={telValue}
@@ -61,12 +59,7 @@ const Delivery = () => {
           <input className="form__input" type="text" name="delivery-address" id="delivery-address"
             placeholder="Город, улица, дом"
             onChange={(evt) => {
-              if (!evt.target.validity.valid) {
-                evt.target.parentElement.classList.add('form__field--error');
-              } else {
-                evt.target.parentElement.classList.remove('form__field--error');
-              }
-
+              isValid(evt);
               setAddressValue(evt.target.value);
             }}
             value={addressValue}
@@ -80,12 +73,7 @@ const Delivery = () => {
           <textarea className="form__input" type="text" name="delivery-comment" id="delivery-comment"
             placeholder="" rows="4"
             onChange={(evt) => {
-              if (!evt.target.validity.valid) {
-                evt.target.parentElement.classList.add('form__field--error');
-              } else {
-                evt.target.parentElement.classList.remove('form__field--error');
-              }
-
+              isValid(evt);
               setCommentValue(evt.target.value);
             }}
             value={commentValue}
