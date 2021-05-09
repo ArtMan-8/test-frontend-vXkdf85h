@@ -1,0 +1,21 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: calc(100vw - 100%);
+  margin-right: 0;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  color: #C4C4C4;
+  background-color: #E5E5E5;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@media screen and (max-width: 1199px) {
+  .root {
+    flex-grow: 1;
+    min-width: 320px;
+  }
+}
